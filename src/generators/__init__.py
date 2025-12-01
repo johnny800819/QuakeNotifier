@@ -1,0 +1,1 @@
+# 建立標示檔：為了讓 Python 知道 generators 是一個可以從中匯入模組的「套件 (Package)」，我們需要在 generators 資料夾裡面，建立一個完全空白的檔案，並將其命名為 __init__.py (前後各兩個底線)。

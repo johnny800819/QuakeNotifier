@@ -1,0 +1,62 @@
+{
+  "run_mode": {
+    "use_test_data": true
+  },
+  "earthquake": {
+    "api_url": "https://opendata.cwa.gov.tw/api/v1/rest/datastore/E-A0015-001",
+    "api_key": "YOUR_CWA_API_KEY",
+    "retries": 1,
+    "min_magnitude": 1.0,
+    "min_intensity": 1,
+    "threshold_logic": "OR",
+    "regions": [
+      "新北市"
+    ]
+  },
+
+  "notification": {
+    "line_message": {
+      "enabled": false,
+      "line_message_token": "YOUR_LINE_TOKEN"
+    },
+    "email": {
+      "enabled": true,
+      "smtp_server": "your.smtp.server",
+      "smtp_port": 25,
+      "sender": "sender@example.com",
+      "recipients": ["recipient@example.com"]
+    },
+    "webhook": {
+      "enabled": false,
+      "url": "https://your-webhook-endpoint"
+    }
+  },
+
+  "health_check": {
+    "enabled": true,
+    "allowed_ips": ["10.0.0.1"],
+    "allowed_domains": ["example.com"],
+    "timeout_ms": 3000,
+    "retries": 2
+  },
+
+  "storage": {
+    "earthquake_json_path": "earthquakeData/earthquake_json_YYYY-MM-DD.json",
+    "cache_notified_path": "cacheNotified/notified_events.json",
+    "log_file": "logs/logs_YYYY-MM-DD.log",
+    "log_retention_days": 10,
+    "error_file": "logs/error_YYYY-MM-DD.log",
+    "error_log_retention_days": 10,
+    "json_retention_days": 10
+  },
+
+  "alerting": {
+    "notify_on_fetch_error": true,
+    "attach_debug_json_in_email": false,
+    "consecutive_failures_alert": {
+      "enabled": true,
+      "threshold": 5,
+      "status_file_path": "cacheNotified/system_status.json"
+    }
+  }
+}

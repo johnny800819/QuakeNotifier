@@ -1,0 +1,125 @@
+# QuakeNotifier 專案 Git 忽略清單
+
+# === 專案特定檔案 ===
+
+docs/*.docx
+歷史版本留存/
+src/certs/
+src/config.json
+logs/
+*.log
+earthquakeData/
+cacheNotified/
+src/test_event.json
+
+# === Python 相關 ===
+
+# 虛擬環境
+venv/
+env/
+ENV/
+.venv
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec.bak
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# 備份檔案
+*.bak
+*.backup
+*~
+
+# === IDE 與編輯器 ===
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# === 作業系統 ===
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# === 資料與輸出檔案 ===
+
+# 暫存檔案
+*.tmp
+*.temp
+
+# 壓縮檔
+*.zip
+*.tar.gz
+*.rar
+
+# 保留 spec 檔案
+!QuakeNotifier.spec
+
+# 保留配置範本
+!src/config.json.template
