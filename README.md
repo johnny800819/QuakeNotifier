@@ -79,7 +79,16 @@ python src/quakeNotifier.py
 
 ### 封裝為執行檔 (EXE)
 
+請**務必在虛擬環境 (venv)** 啟動的狀態下執行打包，以確保依賴套件 (如 `requests`) 能被正確封裝：
+
 ```bash
+# 1. 啟動虛擬環境 (以 PowerShell 為例)
+.\venv\Scripts\activate
+
+# 2. 安裝 pyinstaller (若尚未安裝)
+pip install pyinstaller
+
+# 3. 執行打包
 pyinstaller QuakeNotifier.spec
 ```
 
@@ -164,7 +173,7 @@ C:\inetpub\wwwroot\QuakeNotifier\
 ### 更新部署步驟
 
 1.  **本機封裝**：
-    執行 `pyinstaller QuakeNotifier.spec` 產生新的 `dist/QuakeNotifier.exe`。
+    在虛擬環境 (`venv`) 中執行 `pyinstaller QuakeNotifier.spec` 產生新的 `dist/QuakeNotifier.exe`。
 2.  **檔案複製**：
     將本機 `dist/` 資料夾內的內容，覆蓋至 Server 的 `dist/` 目錄。
 3.  **伺服器執行**：
